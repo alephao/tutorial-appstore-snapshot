@@ -16,8 +16,13 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Description of what the lane does"
-  lane :custom_lane do
-    # add actions here: https://docs.fastlane.tools/actions
+  desc "Generate screenshots for App Store"
+  lane :generate_screenshots do
+    scan(
+      workspace: "MyAwesomeApp.xcworkspace",
+      scheme: "AppStoreScreenshots",
+      device: "iPhone 11 Pro Max",
+      fail_build: false
+    )
   end
 end
