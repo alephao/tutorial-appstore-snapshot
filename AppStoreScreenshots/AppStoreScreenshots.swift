@@ -27,11 +27,19 @@ class AppStoreScreenshots: XCTestCase {
 
   func testScreenshots() throws {
     record = true
-    let userDefaults = UserDefaults() // 1
-    withEnvironment(userDefaults: userDefaults, language: .enUS) {
-      let view = GreetingView()
-      let vc = UIHostingController(rootView: view)
-      assertSnapshot(matching: vc, as: .image(on: .iPhoneXsMax))
+    let userDefaults = UserDefaults()
+
+    let languages: [Language] = [.enAU, .enUS, .es, .pt] // 1
+    let devices: [ViewImageConfig] = [.iPhoneXsMax, .iPhone8Plus] // 2
+
+    for language in languages {
+      for device in devices {
+        withEnvironment(userDefaults: userDefaults, language: language) {
+          let view = GreetingView()
+          let vc = UIHostingController(rootView: view)
+          assertSnapshot(matching: vc, as: .image(on: device))
+        }
+      }
     }
   }
 
