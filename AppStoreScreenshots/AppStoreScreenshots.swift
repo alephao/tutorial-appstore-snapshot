@@ -37,10 +37,42 @@ class AppStoreScreenshots: XCTestCase {
         withEnvironment(userDefaults: userDefaults, language: language) {
           let view = GreetingView()
           let vc = UIHostingController(rootView: view)
-          assertSnapshot(matching: vc, as: .image(on: device))
+          saveScreenshot(matching: vc, as: .image(on: device), dir: folderName(for: language))
         }
       }
     }
   }
 
+}
+
+func saveScreenshot(
+  matching value: UIViewController,
+  as snapshotting: Snapshotting<UIViewController, UIImage>,
+  dir: String,
+  file: StaticString = #file,
+  testName: String = #function,
+  line: UInt = #line
+  ) {
+  let snapshotDirectory = ProcessInfo.processInfo.environment["FASTLANE_SCREENSHOTS_PATH"]! + "/" + dir
+
+  let failure = verifySnapshot(
+    matching: value,
+    as: snapshotting,
+    record: true,
+    snapshotDirectory: snapshotDirectory,
+    file: file,
+    testName: testName,
+    line: line
+  )
+  guard let message = failure else { return }
+  XCTFail(message, file: file, line: line)
+}
+
+func folderName(for language: Language) -> String {
+  switch language {
+    case .enUS: return "en-US"
+    case .enAU: return "en-AU"
+    case .es: return "es-ES"
+    case .pt: return "pt-BR"
+  }
 }
