@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27BFCD7B2460389800A817C2 /* AppStoreScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BFCD7A2460389800A817C2 /* AppStoreScreenshots.swift */; };
+		27BFCD7D2460389800A817C2 /* MyAwesomeAppFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F395C4245BBF0B00C4306A /* MyAwesomeAppFramework.framework */; };
 		27F395AC245BAD6B00C4306A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F395AB245BAD6B00C4306A /* AppDelegate.swift */; };
 		27F395AE245BAD6B00C4306A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F395AD245BAD6B00C4306A /* SceneDelegate.swift */; };
 		27F395B2245BAD6C00C4306A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27F395B1245BAD6C00C4306A /* Assets.xcassets */; };
@@ -23,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		27BFCD7E2460389800A817C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27F395A0245BAD6B00C4306A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27F395C3245BBF0B00C4306A;
+			remoteInfo = MyAwesomeAppFramework;
+		};
 		27F395D7245BBF0C00C4306A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 27F395A0245BAD6B00C4306A /* Project object */;
@@ -47,6 +56,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		27BFCD782460389800A817C2 /* AppStoreScreenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppStoreScreenshots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27BFCD7A2460389800A817C2 /* AppStoreScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreScreenshots.swift; sourceTree = "<group>"; };
+		27BFCD7C2460389800A817C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27F395A8245BAD6B00C4306A /* MyAwesomeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAwesomeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F395AB245BAD6B00C4306A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27F395AD245BAD6B00C4306A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +80,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		27BFCD752460389800A817C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27BFCD7D2460389800A817C2 /* MyAwesomeAppFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27F395A5245BAD6B00C4306A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,11 +135,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		27BFCD792460389800A817C2 /* AppStoreScreenshots */ = {
+			isa = PBXGroup;
+			children = (
+				27BFCD7A2460389800A817C2 /* AppStoreScreenshots.swift */,
+				27BFCD7C2460389800A817C2 /* Info.plist */,
+			);
+			path = AppStoreScreenshots;
+			sourceTree = "<group>";
+		};
 		27F3959F245BAD6B00C4306A = {
 			isa = PBXGroup;
 			children = (
 				27F395AA245BAD6B00C4306A /* MyAwesomeApp */,
 				27F395C5245BBF0B00C4306A /* MyAwesomeAppFramework */,
+				27BFCD792460389800A817C2 /* AppStoreScreenshots */,
 				27F395A9245BAD6B00C4306A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,6 +159,7 @@
 			children = (
 				27F395A8245BAD6B00C4306A /* MyAwesomeApp.app */,
 				27F395C4245BBF0B00C4306A /* MyAwesomeAppFramework.framework */,
+				27BFCD782460389800A817C2 /* AppStoreScreenshots.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,6 +200,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		27BFCD772460389800A817C2 /* AppStoreScreenshots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27BFCD822460389800A817C2 /* Build configuration list for PBXNativeTarget "AppStoreScreenshots" */;
+			buildPhases = (
+				27BFCD742460389800A817C2 /* Sources */,
+				27BFCD752460389800A817C2 /* Frameworks */,
+				27BFCD762460389800A817C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27BFCD7F2460389800A817C2 /* PBXTargetDependency */,
+			);
+			name = AppStoreScreenshots;
+			productName = AppStoreScreenshots;
+			productReference = 27BFCD782460389800A817C2 /* AppStoreScreenshots.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		27F395A7245BAD6B00C4306A /* MyAwesomeApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27F395BC245BAD6C00C4306A /* Build configuration list for PBXNativeTarget "MyAwesomeApp" */;
@@ -216,6 +265,9 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Aleph Retamal";
 				TargetAttributes = {
+					27BFCD772460389800A817C2 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
 					27F395A7245BAD6B00C4306A = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
@@ -242,11 +294,19 @@
 			targets = (
 				27F395A7245BAD6B00C4306A /* MyAwesomeApp */,
 				27F395C3245BBF0B00C4306A /* MyAwesomeAppFramework */,
+				27BFCD772460389800A817C2 /* AppStoreScreenshots */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		27BFCD762460389800A817C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27F395A6245BAD6B00C4306A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,6 +327,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		27BFCD742460389800A817C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27BFCD7B2460389800A817C2 /* AppStoreScreenshots.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27F395A4245BAD6B00C4306A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,6 +359,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		27BFCD7F2460389800A817C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27F395C3245BBF0B00C4306A /* MyAwesomeAppFramework */;
+			targetProxy = 27BFCD7E2460389800A817C2 /* PBXContainerItemProxy */;
+		};
 		27F395D8245BBF0C00C4306A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 27F395C3245BBF0B00C4306A /* MyAwesomeAppFramework */;
@@ -321,6 +394,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		27BFCD802460389800A817C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RWJVRQ865N;
+				INFOPLIST_FILE = AppStoreScreenshots/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alephao.AppStoreScreenshots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		27BFCD812460389800A817C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RWJVRQ865N;
+				INFOPLIST_FILE = AppStoreScreenshots/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alephao.AppStoreScreenshots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		27F395BA245BAD6C00C4306A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -534,6 +643,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		27BFCD822460389800A817C2 /* Build configuration list for PBXNativeTarget "AppStoreScreenshots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27BFCD802460389800A817C2 /* Debug */,
+				27BFCD812460389800A817C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		27F395A3245BAD6B00C4306A /* Build configuration list for PBXProject "MyAwesomeApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
